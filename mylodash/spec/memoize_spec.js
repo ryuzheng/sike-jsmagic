@@ -9,7 +9,7 @@ describe("memoize",function() {
       return n;
     }
 
-    memoizedIdentity = memoize(identity);
+    var memoizedIdentity = memoize(identity);
 
     assert.equal(memoizedIdentity(1),1);
     assert.equal(memoizedIdentity(1),1);
@@ -29,7 +29,7 @@ describe("memoize",function() {
       return o;
     }
 
-    memoizedIdentity = memoize(identity,function(o) {
+    var memoizedIdentity = memoize(identity,function(o) {
       return o[0];
     });
 
